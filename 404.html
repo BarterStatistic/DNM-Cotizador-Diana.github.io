@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#F5F3EF" />
+<link rel="icon" type="image/jpeg" href="Assets/logo pagina.jpeg" />
+<title>404 · Diana Méndez</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+  body{
+    background:
+      radial-gradient(900px 500px at 12% -10%, rgba(181,98,46,0.10), transparent 60%),
+      radial-gradient(900px 500px at 92% 110%, rgba(42,125,111,0.09), transparent 60%),
+      linear-gradient(180deg, #F5F3EF 0%, #EDE9E3 100%);
+    color:#1C1714;
+    font-family:'Inter',system-ui,sans-serif;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:1.5rem;
+  }
+  .wrap{text-align:center;max-width:480px}
+  .code{
+    font-family:'JetBrains Mono',monospace;
+    font-weight:700;
+    font-size:clamp(5rem, 18vw, 9rem);
+    line-height:1;
+    background:linear-gradient(180deg,#D17A42 0%,#2A7D6F 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    text-shadow:0 0 40px rgba(181,98,46,0.18);
+    letter-spacing:-0.05em;
+  }
+  h1{
+    font-family:'Cinzel',serif;
+    font-size:clamp(1.25rem,4vw,1.75rem);
+    margin:1rem 0 0.5rem;
+    letter-spacing:0.04em;
+  }
+  p{color:#6B6259;font-size:0.95rem;line-height:1.6;margin-bottom:2rem}
+  a{
+    display:inline-block;
+    padding:0.85rem 1.75rem;
+    background:linear-gradient(165deg,#D17A42,#9A4B20);
+    color:#FAFAF8;
+    font-weight:700;
+    font-size:0.85rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    border-radius:10px;
+    text-decoration:none;
+    transition:transform 0.2s ease;
+    box-shadow:0 8px 24px -8px rgba(181,98,46,0.35);
+  }
+  a:hover{transform:translateY(-2px)}
+  .tag{
+    font-size:0.65rem;
+    letter-spacing:0.25em;
+    text-transform:uppercase;
+    color:#9E9488;
+    margin-top:2.5rem;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="code">404</div>
+    <h1>Página no encontrada</h1>
+    <p>La ruta que buscas no existe o fue movida. Vuelve al cotizador para continuar.</p>
+    <a href="index.html">← Ir al cotizador</a>
+    <div class="tag">Diana Méndez · Dinamo Saltillo</div>
+  </div>
+</body>
+</html>
