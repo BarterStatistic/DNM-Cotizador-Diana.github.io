@@ -245,7 +245,6 @@ body{
   padding:.15rem .4rem;border-radius:3px;background:var(--cyank);color:var(--cyan2);
   opacity:0;transition:opacity .2s;
 }
-.sc-card.selected .sc-tag{opacity:1;}
 
 /* ── Input field ── */
 .field-row{margin-bottom:1.1rem;}
@@ -617,34 +616,22 @@ tbody tr:hover{background:rgba(181,98,46,.04);}
         <div class="scheme-grid" id="schemeGrid">
           <div class="sc-card" data-sc="motonomina" onclick="selectScheme(this)">
             <div class="sc-name">Motonomina</div>
-            <div class="sc-meta">Enganche 5% – 75%</div>
-            <div class="sc-tag">✓ Seleccionado</div>
-          </div>
+            <div class="sc-meta">Enganche 5% – 75%</div>          </div>
           <div class="sc-card" data-sc="credinamo" onclick="selectScheme(this)">
             <div class="sc-name">Credinamo</div>
-            <div class="sc-meta">Enganche 10% – 75%</div>
-            <div class="sc-tag">✓ Seleccionado</div>
-          </div>
+            <div class="sc-meta">Enganche 10% – 75%</div>          </div>
           <div class="sc-card" data-sc="motoxpress" onclick="selectScheme(this)">
             <div class="sc-name">Motoxpress</div>
-            <div class="sc-meta">Enganche 15% – 75%</div>
-            <div class="sc-tag">✓ Seleccionado</div>
-          </div>
+            <div class="sc-meta">Enganche 15% – 75%</div>          </div>
           <div class="sc-card" data-sc="enganche50" onclick="selectScheme(this)">
             <div class="sc-name">50% de Enganche</div>
-            <div class="sc-meta">Enganche 50% – 75%</div>
-            <div class="sc-tag">✓ Seleccionado</div>
-          </div>
+            <div class="sc-meta">Enganche 50% – 75%</div>          </div>
           <div class="sc-card" data-sc="credinamo_flex" onclick="selectScheme(this)">
             <div class="sc-name">Credinamo Flex</div>
-            <div class="sc-meta">Enganche 10% – 75% · Semanal</div>
-            <div class="sc-tag">✓ Seleccionado</div>
-          </div>
+            <div class="sc-meta">Enganche 10% – 75% · Semanal</div>          </div>
           <div class="sc-card" data-sc="motoxpress_flex" onclick="selectScheme(this)">
             <div class="sc-name">Motoxpress Flex</div>
-            <div class="sc-meta">Enganche 15% – 75% · Semanal</div>
-            <div class="sc-tag">✓ Seleccionado</div>
-          </div>
+            <div class="sc-meta">Enganche 15% – 75% · Semanal</div>          </div>
 
         </div>
         <div class="nav-row">
@@ -858,7 +845,7 @@ const MODELS=[
   ["HEAVY-B CAB",62895,4725],["XTREME RLX 200",57645,2250],["CROSS COUNTRY ADV",55246,2512],
   ["DNM 4 400",75905,2438],["GOLIAT",78110,2250],["B52 250",68145,4133],
   ["SUPER SPORT 400",80315,2250],["HEAVY CAB - R 200",69195,5832],["SKELETON",81470,3983],
-  ["DNM 3.0",83675,2636],["COMANDO",83895,2962],["MOTO TX",85995,5832],
+  ["DNM 3.0",83675,2438],["COMANDO",83895,2962],["MOTO TX",85995,5832],
   ["MOLOTOV C2",81795,2250],["HEAVY MAX 250",94395,0],["BANDID",83895,4766],
   ["HEAVY CAB 300",90195,5832]
 ];
@@ -884,8 +871,8 @@ const SCHEMES={
     {range:[10,49.99],  m:{52:.029317,65:.025751,96:.021436,128:.019474,142:.018972,154:.018641,170:.018290}},
     {range:[50,75],     m:{52:.028701,65:.025090,96:.020707,128:.018693,142:.018158,154:.017806,170:.017467}}
   ]},
-  motoxpress_flex:{label:"Motoxpress Flex",min:15,max:75,termUnit:"semanas",terms:[52,65,96,120,128,142,144,154,170],levels:[
-    {range:[0,100],     m:{52:.029955,65:.026416,96:.022169,120:.020744,128:.020269,142:.019777,144:.019714,154:.019470,170:.019148}}
+  motoxpress_flex:{label:"Motoxpress Flex",min:15,max:75,termUnit:"semanas",terms:[52,65,96,128,142,144,154,170],levels:[
+    {range:[0,100],     m:{52:.029955,65:.026416,96:.022169,128:.020269,142:.019777,144:.019714,154:.019470,170:.019148}}
   ]},
 };
 
