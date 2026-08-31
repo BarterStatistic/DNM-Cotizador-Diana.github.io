@@ -833,8 +833,10 @@ tbody tr:hover{background:rgba(181,98,46,.04);}
 /* ─── DATA ─── */
 const MODELS=[
   // [nombre, precio, servicio_preventivo]
-  ["U2",21945,2287],["KF-RACER",21971,2460],["U5",26145,2287],["METRO",31395,2250],
-  ["ADVENTURE ELITE",31395,2250],["ALIEN R 175",32445,2250],["ROCKY 125",37370,2250],
+  // Precios = "PRECIO DE LISTA" del bloque PRECIO PROMOCION. Lista Dinamo vigente 25/08/2026.
+  ["U2",21945,2287],["KF-RACER",21971,2460],["U5",26145,2287],["U5 175",27720,2287],
+  ["METRO",31395,2250],["ADVENTURE ELITE",31395,2250],["ADVENTURE ELITE 175",34545,2250],
+  ["ALIEN R 175",32445,2250],["ROCKY 125",37370,2250],
   ["SCORPION 200",39575,2512],["CUSTOM 150",38745,2287],["CUSTOM BLACK",43985,2287],
   ["RAYO 175",42945,2287],["CHOPPER",38556,2962],["RENEGADA 250",51650,2962],
   ["SCORPION XT",41895,2512],["RAYO ELITE 250",52805,2512],["R2 GT",55010,3814],
@@ -856,13 +858,17 @@ const SCHEMES={
   credinamo:{label:"Credinamo",min:10,max:75,termUnit:"quincenas",terms:[12,18,24,36,48,60,72],levels:[
     {range:[10,19.99],  m:{12:.103978,18:.077030,24:.063198,36:.051441,48:.047086,60:.045741,72:.044146}},
     {range:[20,29.99],  m:{12:.101450,18:.074411,24:.060493,36:.048478,48:.043844,60:.042268,72:.040490}},
-    {range:[30,75],     m:{12:.097719,18:.070579,24:.056545,36:.044170,48:.039177,60:.037233,72:.035218}}
+    {range:[30,49.99],  m:{12:.097719,18:.070579,24:.056545,36:.044170,48:.039177,60:.037233,72:.035218}},
+    // >=50%: calibrado contra la tabla oficial "CREDINAMO 50%" (vigencia 25/08/2026)
+    {range:[50,75],     m:{12:.101446,18:.074417,24:.060490,36:.048469,48:.043840,60:.042260,72:.040489}}
   ]},
   motoxpress:{label:"Motoxpress",min:15,max:75,termUnit:"quincenas",terms:[12,18,24,36,48,60,72],levels:[
     {range:[0,100],     m:{12:.106526,18:.079696,24:.065980,36:.054497,48:.050399,60:.049320,72:.047874}}
   ]},
   enganche50:{label:"50% de Enganche",min:50,max:75,termUnit:"quincenas",terms:[12,18,24,36,48,60,72],levels:[
-    {range:[0,100],     m:{12:.101456,18:.074419,24:.060489,36:.048456,48:.043838,60:.042265,72:.040492}}
+    // Calibrado contra la tabla oficial "CREDINAMO 50%" (vigencia 25/08/2026):
+    // reproduce al peso las 245 parcialidades publicadas (35 modelos x 7 plazos)
+    {range:[0,100],     m:{12:.101446,18:.074417,24:.060490,36:.048469,48:.043840,60:.042260,72:.040489}}
   ]},
   credinamo_flex:{label:"Credinamo Flex",min:10,max:75,termUnit:"semanas",terms:[52,65,96,128,142,154,170],levels:[
     {range:[10,49.99],  m:{52:.029317,65:.025751,96:.021436,128:.019474,142:.018972,154:.018641,170:.018290}},
