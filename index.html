@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta name="theme-color" content="#F5F3EF"/>
+<meta name="theme-color" content="#F3F3F4"/>
 <link rel="icon" type="image/jpeg" href="Assets/logo pagina.jpeg">
 <title>Cotizador · Diana Méndez</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,30 +18,30 @@
 </script>
 <style>
 :root{
-  /* Superficies — tema claro */
-  --bg:      #F5F3EF;
-  --bg2:     #EDE9E3;
-  --surf:    #FAFAF8;
-  --surf2:   #F0EDE7;
-  --line:    #D9D3CA;
-  --line2:   #C8C0B5;
+  /* Superficies — blanco y gris */
+  --bg:      #F3F3F4;
+  --bg2:     #E9E9EB;
+  --surf:    #FFFFFF;
+  --surf2:   #F5F5F6;
+  --line:    #E3E3E6;
+  --line2:   #C9C9CE;
 
-  /* Texto */
-  --txt:     #1C1714;
-  --txt2:    #6B6259;
-  --txt3:    #9E9488;
+  /* Texto — gris */
+  --txt:     #1A1A1A;
+  --txt2:    #5A5A5E;
+  --txt3:    #8B8B90;
 
-  /* Marca — terracota + amarillo dorado */
-  --gold:    #B5622E;
-  --gold2:   #D17A42;
-  --gold3:   #E8985A;
-  --golda:   rgba(181,98,46,.12);
-  --goldaa:  rgba(181,98,46,.06);
+  /* Acento — amarillo (único color) */
+  --gold:    #FFC000;
+  --gold2:   #C99700;
+  --gold3:   #856600;
+  --golda:   rgba(255,192,0,.16);
+  --goldaa:  rgba(255,192,0,.30);
   --cyan:    #FFC000;
-  --cyan2:   #9A7200;
-  --cyank:   rgba(255,192,0,.18);
-  --ok:      #2D8A5E;
-  --err:     #C0392B;
+  --cyan2:   #856600;
+  --cyank:   rgba(255,192,0,.16);
+  --ok:      #3A3A3A;
+  --err:     #1A1A1A;
 
   --ff-head: 'Urbanist', system-ui, sans-serif;
   --ff-body: 'Manrope', system-ui, sans-serif;
@@ -139,7 +139,7 @@ html.no-intro .rise{animation-delay:calc(var(--d,0)*.05s);}
 .bg-canvas{position:fixed;inset:0;z-index:var(--z-bg);pointer-events:none;overflow:hidden;}
 .orb{position:absolute;border-radius:50%;filter:blur(70px);}
 .orb-1{width:62vw;height:56vh;top:-18%;left:-16%;
-  background:radial-gradient(circle,rgba(181,98,46,.13) 0%,transparent 66%);
+  background:radial-gradient(circle,rgba(255,192,0,.13) 0%,transparent 66%);
   animation:drift1 22s ease-in-out infinite;}
 .orb-2{width:56vw;height:60vh;bottom:-22%;right:-14%;
   background:radial-gradient(circle,rgba(255,192,0,.11) 0%,transparent 66%);
@@ -149,7 +149,7 @@ html.no-intro .rise{animation-delay:calc(var(--d,0)*.05s);}
 
 .bg-arcs{position:fixed;inset:0;width:100%;height:100%;z-index:var(--z-bg);pointer-events:none;}
 .bg-vignette{position:fixed;inset:0;z-index:var(--z-bg);pointer-events:none;
-  background:radial-gradient(ellipse 120% 90% at 50% 0%,transparent 45%,rgba(245,243,239,.55) 100%);}
+  background:radial-gradient(ellipse 120% 90% at 50% 0%,transparent 45%,rgba(243,243,244,.55) 100%);}
 
 /* ══ ESTRUCTURA ═════════════════════════════════════════════════════ */
 .wrap{position:relative;z-index:var(--z-base);max-width:1240px;margin:0 auto;padding:1.5rem 1.1rem 3rem;}
@@ -189,7 +189,7 @@ html.no-intro .rise{animation-delay:calc(var(--d,0)*.05s);}
   font-family:var(--ff-mono);font-size:var(--t-xs);color:var(--txt3);
   transition:border-color .2s,color .2s,background .2s;
 }
-.sec.done .sec-n{border-color:var(--ok);color:var(--ok);background:rgba(45,138,94,.12);}
+.sec.done .sec-n{border-color:var(--ok);color:var(--ok);background:rgba(58,58,58,.12);}
 .sec-title{font-weight:700;font-size:var(--t-md);color:var(--txt);}
 .sec-state{margin-left:auto;font-family:var(--ff-mono);font-size:var(--t-xs);color:var(--txt3);}
 .sec.done .sec-state{color:var(--ok);}
@@ -211,8 +211,8 @@ html.no-intro .rise{animation-delay:calc(var(--d,0)*.05s);}
   background:var(--surf2);border:1px solid var(--line);border-radius:var(--r-md);
   padding:.55rem .65rem;transition:border-color .18s,background .18s;
 }
-.moto:hover{border-color:var(--gold);background:rgba(181,98,46,.09);}
-.moto[aria-pressed="true"]{border-color:var(--gold);background:rgba(181,98,46,.13);box-shadow:inset 0 0 0 1px var(--gold);}
+.moto:hover{border-color:var(--gold);background:rgba(255,192,0,.09);}
+.moto[aria-pressed="true"]{border-color:var(--gold);background:rgba(255,192,0,.13);box-shadow:inset 0 0 0 1px var(--gold);}
 .moto-name{display:block;font-family:var(--ff-head);font-size:var(--t-sm);font-weight:700;line-height:1.25;padding-right:1rem;}
 .moto-price{display:block;font-family:var(--ff-mono);font-size:var(--t-xs);color:var(--gold2);margin-top:.1rem;font-variant-numeric:tabular-nums;}
 .moto-tick{position:absolute;top:.4rem;right:.45rem;width:15px;height:15px;border-radius:50%;background:var(--gold);display:none;place-items:center;}
@@ -222,7 +222,7 @@ html.no-intro .rise{animation-delay:calc(var(--d,0)*.05s);}
 
 .picked{
   display:none;align-items:center;justify-content:space-between;gap:.6rem;
-  background:rgba(181,98,46,.09);border:1px solid rgba(181,98,46,.34);
+  background:rgba(255,192,0,.09);border:1px solid rgba(255,192,0,.34);
   border-radius:var(--r-md);padding:.6rem .8rem;margin-bottom:.7rem;
 }
 .picked.show{display:flex;}
@@ -268,7 +268,7 @@ html.no-intro .rise{animation-delay:calc(var(--d,0)*.05s);}
 .svc{display:flex;align-items:flex-start;gap:.65rem;margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--line);}
 .switch{flex:none;width:38px;height:21px;border-radius:99px;background:var(--surf2);border:1px solid var(--line2);position:relative;transition:background .2s,border-color .2s;}
 .switch::after{content:'';position:absolute;top:2px;left:2px;width:15px;height:15px;border-radius:50%;background:var(--txt3);transition:transform .2s var(--ease),background .2s;}
-.switch[aria-pressed="true"]{background:rgba(181,98,46,.24);border-color:var(--gold);}
+.switch[aria-pressed="true"]{background:rgba(255,192,0,.24);border-color:var(--gold);}
 .switch[aria-pressed="true"]::after{transform:translateX(17px);background:var(--gold2);}
 .svc-title{font-size:var(--t-sm);font-weight:600;}
 .svc-sub{font-family:var(--ff-mono);font-size:var(--t-xs);color:var(--txt3);}
@@ -277,7 +277,7 @@ html.no-intro .rise{animation-delay:calc(var(--d,0)*.05s);}
 .res{overflow:hidden;}
 
 .todo{padding:2.5rem 1.25rem;text-align:center;}
-.todo-icon{width:46px;height:46px;border-radius:50%;border:1px solid rgba(181,98,46,.3);background:rgba(181,98,46,.08);display:grid;place-items:center;margin:0 auto .9rem;color:var(--gold2);}
+.todo-icon{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,192,0,.3);background:rgba(255,192,0,.08);display:grid;place-items:center;margin:0 auto .9rem;color:var(--gold2);}
 .todo-title{font-family:var(--ff-head);font-size:var(--t-lg);font-weight:700;color:var(--txt2);margin-bottom:1.1rem;}
 .todo-list{display:inline-flex;flex-direction:column;gap:.5rem;text-align:left;}
 .todo-item{display:flex;align-items:center;gap:.55rem;font-size:var(--t-sm);color:var(--txt3);}
@@ -361,7 +361,7 @@ html.no-intro .rise{animation-delay:calc(var(--d,0)*.05s);}
 .foot-note .by{color:var(--gold2);font-weight:600;}
 .btn-dl{
   display:inline-flex;align-items:center;gap:.5rem;white-space:nowrap;
-  background:var(--gold);color:#FAFAF8;border-radius:var(--r-md);
+  background:var(--gold);color:#1A1A1A;border-radius:var(--r-md);
   padding:.6rem 1rem;font-family:var(--ff-head);
   font-weight:700;font-size:var(--t-sm);
   transition:background .18s,transform .12s;
@@ -373,7 +373,7 @@ html.no-intro .rise{animation-delay:calc(var(--d,0)*.05s);}
 .credit{margin-top:2rem;text-align:right;font-family:var(--ff-mono);font-size:var(--t-xs);color:var(--txt3);opacity:.8;}
 
 /* ══ PANEL DE DESCARGA ══════════════════════════════════════════════ */
-.scrim{position:fixed;inset:0;z-index:var(--z-scrim);background:rgba(28,23,20,.42);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;}
+.scrim{position:fixed;inset:0;z-index:var(--z-scrim);background:rgba(0,0,0,.35);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;}
 .scrim.open{opacity:1;visibility:visible;}
 .dl{
   position:fixed;z-index:var(--z-panel);right:0;top:0;bottom:0;width:min(400px,100%);
@@ -399,9 +399,9 @@ html.no-intro .rise{animation-delay:calc(var(--d,0)*.05s);}
   padding:.7rem .8rem;transition:border-color .18s,background .18s;
 }
 .dl-mode:hover{border-color:var(--line2);}
-.dl-mode[aria-pressed="true"]{border-color:var(--gold);background:rgba(181,98,46,.11);}
+.dl-mode[aria-pressed="true"]{border-color:var(--gold);background:rgba(255,192,0,.11);}
 .dl-mode-ico{width:30px;height:30px;flex:none;border-radius:var(--r-sm);background:var(--bg2);display:grid;place-items:center;color:var(--txt3);}
-.dl-mode[aria-pressed="true"] .dl-mode-ico{color:var(--gold2);background:rgba(181,98,46,.14);}
+.dl-mode[aria-pressed="true"] .dl-mode-ico{color:var(--gold2);background:rgba(255,192,0,.14);}
 .dl-mode-name{display:block;font-weight:600;font-size:var(--t-sm);}
 .dl-mode-sub{display:block;font-size:var(--t-xs);color:var(--txt3);}
 
@@ -412,7 +412,7 @@ html.no-intro .rise{animation-delay:calc(var(--d,0)*.05s);}
   padding:.55rem .75rem;transition:border-color .18s,background .18s;
 }
 .dl-item:hover{border-color:var(--line2);}
-.dl-item[aria-checked="true"]{border-color:var(--gold);background:rgba(181,98,46,.09);}
+.dl-item[aria-checked="true"]{border-color:var(--gold);background:rgba(255,192,0,.09);}
 .dl-box{width:17px;height:17px;flex:none;border-radius:5px;border:1px solid var(--line2);display:grid;place-items:center;}
 .dl-item[aria-checked="true"] .dl-box{background:var(--gold);border-color:var(--gold);}
 .dl-box svg{display:none;}
@@ -423,7 +423,7 @@ html.no-intro .rise{animation-delay:calc(var(--d,0)*.05s);}
 .dl-foot{padding:1rem 1.25rem;border-top:1px solid var(--line);}
 .dl-cta{
   width:100%;display:flex;align-items:center;justify-content:center;gap:.5rem;
-  background:var(--gold);color:#FAFAF8;border-radius:var(--r-md);padding:.7rem 1rem;
+  background:var(--gold);color:#1A1A1A;border-radius:var(--r-md);padding:.7rem 1rem;
   font-family:var(--ff-head);font-weight:700;font-size:var(--t-md);
   transition:background .18s;
 }
@@ -470,13 +470,13 @@ html.no-intro .rise{animation-delay:calc(var(--d,0)*.05s);}
     <mask id="mA"><rect width="1200" height="800" fill="url(#fadeA)"/></mask>
     <mask id="mB"><rect width="1200" height="800" fill="url(#fadeB)"/></mask>
   </defs>
-  <g mask="url(#mA)" fill="none" stroke="#B5622E">
+  <g mask="url(#mA)" fill="none" stroke="#D9A600">
     <circle cx="1030" cy="80" r="150" stroke-opacity=".20"/>
     <circle cx="1030" cy="80" r="228" stroke-opacity=".13"/>
     <circle cx="1030" cy="80" r="330" stroke-opacity=".09"/>
     <circle cx="1030" cy="80" r="192" stroke-width="11" stroke-opacity=".16" stroke-dasharray="1.6 21"/>
   </g>
-  <g mask="url(#mB)" fill="none" stroke="#E8AF00">
+  <g mask="url(#mB)" fill="none" stroke="#D9A600">
     <circle cx="120" cy="760" r="118" stroke-opacity=".18"/>
     <circle cx="120" cy="760" r="186" stroke-opacity=".11"/>
     <circle cx="120" cy="760" r="150" stroke-width="9" stroke-opacity=".14" stroke-dasharray="1.4 18"/>
@@ -589,9 +589,9 @@ html.no-intro .rise{animation-delay:calc(var(--d,0)*.05s);}
         </div>
         <p class="todo-title">Faltan datos para calcular</p>
         <div class="todo-list">
-          <div class="todo-item" id="tdModel"><span class="todo-box"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#F5F3EF" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg></span>Elige un modelo</div>
-          <div class="todo-item" id="tdScheme"><span class="todo-box"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#F5F3EF" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg></span>Elige un esquema de crédito</div>
-          <div class="todo-item" id="tdDown"><span class="todo-box"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#F5F3EF" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg></span>Fija el enganche dentro del rango</div>
+          <div class="todo-item" id="tdModel"><span class="todo-box"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#F3F3F4" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg></span>Elige un modelo</div>
+          <div class="todo-item" id="tdScheme"><span class="todo-box"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#F3F3F4" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg></span>Elige un esquema de crédito</div>
+          <div class="todo-item" id="tdDown"><span class="todo-box"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#F3F3F4" stroke-width="4"><polyline points="20 6 9 17 4 12"/></svg></span>Fija el enganche dentro del rango</div>
         </div>
       </div>
 
@@ -760,7 +760,7 @@ function priceOf(){
   MODELS.forEach(([name,price],i)=>{
     const b=document.createElement('button');
     b.type='button'; b.className='moto'; b.setAttribute('aria-pressed','false'); b.dataset.i=i;
-    b.innerHTML=`<span class="moto-tick" aria-hidden="true"><svg width="8" height="8" viewBox="0 0 10 8" fill="none" stroke="#FAFAF8" stroke-width="2"><polyline points="1,4 4,7 9,1"/></svg></span>
+    b.innerHTML=`<span class="moto-tick" aria-hidden="true"><svg width="8" height="8" viewBox="0 0 10 8" fill="none" stroke="#1A1A1A" stroke-width="2"><polyline points="1,4 4,7 9,1"/></svg></span>
       <span class="moto-name">${name}</span>
       <span class="moto-price">${mxn0(price)}</span>`;
     b.onclick=()=>pickModel(i);
@@ -1014,7 +1014,7 @@ function buildDlList(){
     b.setAttribute('role',dlMode==='multi'?'checkbox':'radio');
     const on = dlMode==='multi' ? dlChecked.has(t) : dlSingle===t;
     b.setAttribute('aria-checked',String(on));
-    b.innerHTML=`<span class="dl-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#FAFAF8" stroke-width="3.4"><polyline points="20 6 9 17 4 12"/></svg></span>
+    b.innerHTML=`<span class="dl-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="3.4"><polyline points="20 6 9 17 4 12"/></svg></span>
       <span class="dl-item-name">${t} ${sc.termUnit}</span>
       <span class="dl-item-val">${mxn0(lastInst[t])}</span>`;
     b.onclick=()=>{
@@ -1069,27 +1069,27 @@ async function download(){
   const cabecera=`
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.1rem;">
       <div>
-        <div style="font-size:.6rem;color:#9E9488;margin-bottom:.3rem;">Cotización · Diana Méndez · Dinamo Saltillo</div>
+        <div style="font-size:.6rem;color:#8B8B90;margin-bottom:.3rem;">Cotización · Diana Méndez · Dinamo Saltillo</div>
         <div style="font-size:1.25rem;font-weight:800;">${name}</div>
       </div>
-      <div style="padding:.28rem .7rem;border-radius:99px;background:rgba(255,192,0,.16);border:1px solid rgba(255,192,0,.38);font-size:.66rem;font-weight:700;color:#9A7200;">${sc.label}</div>
+      <div style="padding:.28rem .7rem;border-radius:99px;background:rgba(255,192,0,.16);border:1px solid rgba(255,192,0,.38);font-size:.66rem;font-weight:700;color:#856600;">${sc.label}</div>
     </div>`;
   const pie=(nota)=>`
-    <div style="padding:.75rem 1.25rem;display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid #D9D3CA;">
-      <span style="font-size:.62rem;color:#9E9488;">${nota}</span>
+    <div style="padding:.75rem 1.25rem;display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid #E3E3E6;">
+      <span style="font-size:.62rem;color:#8B8B90;">${nota}</span>
       <div style="display:flex;flex-direction:column;align-items:flex-end;gap:.2rem;">
-        <span style="font-size:.62rem;color:#B5622E;font-weight:600;">Cotizado por Diana Méndez · ${fecha}</span>
-        <span style="font-size:.62rem;color:#9E9488;">Cotización con vigencia de 5 días</span>
+        <span style="font-size:.62rem;color:#856600;font-weight:600;">Cotizado por Diana Méndez · ${fecha}</span>
+        <span style="font-size:.62rem;color:#8B8B90;">Cotización con vigencia de 5 días</span>
       </div>
     </div>`;
   const dato=(l,v,color)=>`
-    <div style="background:rgba(230,225,217,.72);border:1px solid #D9D3CA;border-radius:8px;padding:.6rem .75rem;">
-      <div style="font-size:.6rem;color:#9E9488;margin-bottom:.25rem;">${l}</div>
+    <div style="background:rgba(237,237,239,.72);border:1px solid #E3E3E6;border-radius:8px;padding:.6rem .75rem;">
+      <div style="font-size:.6rem;color:#8B8B90;margin-bottom:.25rem;">${l}</div>
       <div style="font-size:.85rem;font-weight:500;font-family:'DM Mono',monospace;${color?'color:'+color+';':''}word-break:break-word;">${v}</div>
     </div>`;
 
   const card=document.createElement('div');
-  card.style.cssText="position:absolute;left:-9999px;top:0;width:640px;background:#FAFAF8;font-family:Urbanist,sans-serif;color:#1C1714;border-radius:16px;overflow:hidden;border:1px solid #D9D3CA;";
+  card.style.cssText="position:absolute;left:-9999px;top:0;width:640px;background:#FFFFFF;font-family:Urbanist,sans-serif;color:#1A1A1A;border-radius:16px;overflow:hidden;border:1px solid #E3E3E6;";
 
   if(dlMode==='single'){
     /* Un solo plazo: la parcialidad manda y el resto de las cifras se reparte
@@ -1097,30 +1097,30 @@ async function download(){
     const t=terms[0];
     const datos=[['Precio de Lista',mxn(listPrice),'']];
     if(svcOn&&svcPrice>0){
-      datos.push(['Servicio preventivo','+'+mxn(svcPrice),'#2D8A5E'],['Precio Paquete',mxn(price),'']);
+      datos.push(['Servicio preventivo','+'+mxn(svcPrice),'#3A3A3A'],['Precio Paquete',mxn(price),'']);
     }
     datos.push(
-      ['Enganche',pct(dp),'#9A7200'],
-      ['Monto Enganche',mxn(downAmt),'#B5622E'],
+      ['Enganche',pct(dp),'#856600'],
+      ['Monto Enganche',mxn(downAmt),'#856600'],
       ['A Financiar',mxn(fin),'']
     );
     const cols=Math.ceil(datos.length/2);
     const fila=(items)=>`<div style="display:grid;grid-template-columns:repeat(${cols},1fr);gap:.5rem;">${items.map(d=>dato(d[0],d[1],d[2])).join('')}</div>`;
 
     card.innerHTML=`
-      <div style="background:linear-gradient(135deg,#FAFAF8,#EDE9E3);padding:1.5rem 1.75rem 1.35rem;">
+      <div style="background:linear-gradient(135deg,#FFFFFF,#E9E9EB);padding:1.5rem 1.75rem 1.35rem;">
         ${cabecera}
-        <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;background:rgba(181,98,46,.09);border:1px solid rgba(181,98,46,.34);border-radius:12px;padding:1rem 1.25rem;">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;background:rgba(255,192,0,.09);border:1px solid rgba(255,192,0,.34);border-radius:12px;padding:1rem 1.25rem;">
           <div>
-            <div style="font-size:.6rem;color:#9E9488;margin-bottom:.2rem;">Plazo</div>
+            <div style="font-size:.6rem;color:#8B8B90;margin-bottom:.2rem;">Plazo</div>
             <div style="display:flex;align-items:baseline;gap:.4rem;">
-              <span style="font-size:2rem;font-weight:800;color:#9A7200;line-height:1;">${t}</span>
-              <span style="font-size:.75rem;color:#6B6259;">${sc.termUnit}</span>
+              <span style="font-size:2rem;font-weight:800;color:#856600;line-height:1;">${t}</span>
+              <span style="font-size:.75rem;color:#5A5A5E;">${sc.termUnit}</span>
             </div>
           </div>
           <div style="text-align:right;">
-            <div style="font-size:.6rem;color:#9E9488;margin-bottom:.2rem;">Parcialidad ${sc.termUnit.replace(/s$/,'')}</div>
-            <div style="font-size:2.15rem;font-weight:600;color:#B5622E;font-family:'DM Mono',monospace;line-height:1.05;">${mxn0(lastInst[t])}</div>
+            <div style="font-size:.6rem;color:#8B8B90;margin-bottom:.2rem;">Parcialidad ${sc.termUnit.replace(/s$/,'')}</div>
+            <div style="font-size:2.15rem;font-weight:600;color:#856600;font-family:'DM Mono',monospace;line-height:1.05;">${mxn0(lastInst[t])}</div>
           </div>
         </div>
       </div>
@@ -1133,12 +1133,12 @@ async function download(){
     const datos=[['Precio de Lista',mxn(listPrice),'']];
     if(svcOn&&svcPrice>0) datos.push(['Precio Paquete',mxn(price),'']);
     datos.push(
-      ['Enganche',pct(dp),'#9A7200'],
-      ['Monto Enganche',mxn(downAmt),'#B5622E'],
+      ['Enganche',pct(dp),'#856600'],
+      ['Monto Enganche',mxn(downAmt),'#856600'],
       ['A Financiar',mxn(fin),'']
     );
     card.innerHTML=`
-      <div style="background:linear-gradient(135deg,#FAFAF8,#EDE9E3);padding:1.5rem 1.75rem 1.25rem;">
+      <div style="background:linear-gradient(135deg,#FFFFFF,#E9E9EB);padding:1.5rem 1.75rem 1.25rem;">
         ${cabecera}
         <div style="display:grid;grid-template-columns:repeat(${datos.length},1fr);gap:.5rem;">
           ${datos.map(d=>dato(d[0],d[1],d[2])).join('')}
@@ -1146,21 +1146,21 @@ async function download(){
       </div>
       <table style="width:100%;border-collapse:collapse;">
         <thead>
-          <tr style="background:rgba(230,225,217,.6);">
-            <th style="font-size:.62rem;font-weight:600;color:#9E9488;padding:.75rem 1.25rem;text-align:left;border-bottom:1px solid #D9D3CA;">Plazo</th>
-            <th style="font-size:.62rem;font-weight:600;color:#9E9488;padding:.75rem 1.25rem;text-align:left;border-bottom:1px solid #D9D3CA;">Enganche</th>
-            <th style="font-size:.62rem;font-weight:600;color:#9E9488;padding:.75rem 1.25rem;text-align:right;border-bottom:1px solid #D9D3CA;">Parcialidad</th>
+          <tr style="background:rgba(237,237,239,.6);">
+            <th style="font-size:.62rem;font-weight:600;color:#8B8B90;padding:.75rem 1.25rem;text-align:left;border-bottom:1px solid #E3E3E6;">Plazo</th>
+            <th style="font-size:.62rem;font-weight:600;color:#8B8B90;padding:.75rem 1.25rem;text-align:left;border-bottom:1px solid #E3E3E6;">Enganche</th>
+            <th style="font-size:.62rem;font-weight:600;color:#8B8B90;padding:.75rem 1.25rem;text-align:right;border-bottom:1px solid #E3E3E6;">Parcialidad</th>
           </tr>
         </thead>
         <tbody>
           ${terms.map((t,i)=>`
-            <tr style="background:${i%2===0?'rgba(240,237,231,.75)':'rgba(250,250,248,.88)'};">
-              <td style="padding:.7rem 1.25rem;border-bottom:1px solid rgba(180,172,163,.4);">
-                <span style="font-size:.82rem;padding:.18rem .5rem;border-radius:5px;background:rgba(255,192,0,.14);border:1px solid rgba(255,192,0,.26);color:#9A7200;">${t}</span>
-                <span style="font-size:.68rem;color:#9E9488;margin-left:.5rem;">${sc.termUnit}</span>
+            <tr style="background:${i%2===0?'rgba(245,245,246,.75)':'rgba(255,255,255,.88)'};">
+              <td style="padding:.7rem 1.25rem;border-bottom:1px solid rgba(201,201,206,.4);">
+                <span style="font-size:.82rem;padding:.18rem .5rem;border-radius:5px;background:rgba(255,192,0,.14);border:1px solid rgba(255,192,0,.26);color:#856600;">${t}</span>
+                <span style="font-size:.68rem;color:#8B8B90;margin-left:.5rem;">${sc.termUnit}</span>
               </td>
-              <td style="padding:.7rem 1.25rem;font-size:.8rem;color:#6B6259;font-family:'DM Mono',monospace;border-bottom:1px solid rgba(180,172,163,.4);">${pct(dp)} · ${mxn(downAmt)}</td>
-              <td style="padding:.7rem 1.25rem;font-size:1rem;font-weight:600;color:#B5622E;font-family:'DM Mono',monospace;text-align:right;border-bottom:1px solid rgba(180,172,163,.4);">${mxn0(lastInst[t])}</td>
+              <td style="padding:.7rem 1.25rem;font-size:.8rem;color:#5A5A5E;font-family:'DM Mono',monospace;border-bottom:1px solid rgba(201,201,206,.4);">${pct(dp)} · ${mxn(downAmt)}</td>
+              <td style="padding:.7rem 1.25rem;font-size:1rem;font-weight:600;color:#856600;font-family:'DM Mono',monospace;text-align:right;border-bottom:1px solid rgba(201,201,206,.4);">${mxn0(lastInst[t])}</td>
             </tr>`).join('')}
         </tbody>
       </table>
@@ -1169,7 +1169,7 @@ async function download(){
   document.body.appendChild(card);
 
   try{
-    const canvas=await html2canvas(card,{scale:2,backgroundColor:'#FAFAF8',useCORS:true,logging:false,windowWidth:640,width:640,scrollX:0,scrollY:0});
+    const canvas=await html2canvas(card,{scale:2,backgroundColor:'#FFFFFF',useCORS:true,logging:false,windowWidth:640,width:640,scrollX:0,scrollY:0});
     const link=document.createElement('a');
     link.download=`cotizacion-${name.replace(/\s+/g,'-').toLowerCase()}.jpg`;
     link.href=canvas.toDataURL('image/jpeg',.93);
