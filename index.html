@@ -722,6 +722,16 @@ const SCHEMES={
     // reproduce al peso las 245 parcialidades publicadas (35 modelos x 7 plazos)
     {range:[0,100],     m:{12:.101446,18:.074417,24:.060490,36:.048469,48:.043840,60:.042260,72:.040489}}
   ]},
+  motonomina_flex:{label:"Motonomina Flex",min:5,max:75,termUnit:"semanas",terms:[52,65,96,128,142,154,170],levels:[
+    // Calibrado contra la tabla oficial "MOTONOMINA FLEX 5%" (vigencia 25/08/2026):
+    // reproduce al peso las 245 parcialidades publicadas (35 modelos x 7 plazos).
+    // Los precios de esa tabla son SIN servicio preventivo, igual que MODELS[i][1],
+    // asi que el multiplicador se aplica sobre la misma base y el servicio se suma
+    // aparte sin contarse dos veces.
+    // Solo se publico el tramo de 5%; si aparecen tarifas para enganches mayores,
+    // agregar niveles como en `motonomina`.
+    {range:[0,100],     m:{52:.028695,65:.025093,96:.0207137,128:.018691,142:.018162,154:.017812,170:.017455}}
+  ]},
   credinamo_flex:{label:"Credinamo Flex",min:10,max:75,termUnit:"semanas",terms:[52,65,96,128,142,154,170],levels:[
     {range:[10,49.99],  m:{52:.029317,65:.025751,96:.021436,128:.019474,142:.018972,154:.018641,170:.018290}},
     {range:[50,75],     m:{52:.028701,65:.025090,96:.020707,128:.018693,142:.018158,154:.017806,170:.017467}}
